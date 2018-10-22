@@ -4,11 +4,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class iconAdapter extends RecyclerView.Adapter<IconDataViewHolder>{
+public class IconAdapter extends RecyclerView.Adapter<IconDataViewHolder>{
 
     private ArrayList<IconData> icons;
 
-    public IconDataAdapter(ArrayList<IconData> icons) { this.icons = icons; }
+    public IconAdapter(ArrayList<IconData> icons) { this.icons = icons; }
 
     public IconDataViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View row = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_icon, parent, false);

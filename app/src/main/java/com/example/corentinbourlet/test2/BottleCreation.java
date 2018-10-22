@@ -15,14 +15,8 @@ public class BottleCreation extends Activity {
 
         setContentView(R.layout.listbottle);
 
-
-
-
-
-
 /*
         command.listBottle.add(new Bottle(nameUsrChoice,priceUsrChoiceInt));
-
         super.onCreate(savedInstanceState);*/
     }
 

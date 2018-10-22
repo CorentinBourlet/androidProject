@@ -1,6 +1,6 @@
 package com.example.corentinbourlet.test2;
 
-public class iconHolder {
+public class IconHolder {
 
 
 
