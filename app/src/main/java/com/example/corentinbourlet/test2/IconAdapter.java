@@ -1,9 +1,10 @@
 package com.example.corentinbourlet.test2;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+
+/*
 public class IconAdapter extends RecyclerView.Adapter<IconDataViewHolder>{
 
     private ArrayList<IconData> icons;
@@ -26,4 +27,4 @@ public class IconAdapter extends RecyclerView.Adapter<IconDataViewHolder>{
         return this.icons.size();
     }
 
-}
+}*/

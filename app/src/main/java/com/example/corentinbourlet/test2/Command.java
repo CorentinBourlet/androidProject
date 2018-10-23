@@ -1,9 +1,10 @@
 package com.example.corentinbourlet.test2;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Command {
+public class Command implements Serializable {
 
     public List<Bottle> listBottle;
     int numberOfBottle;

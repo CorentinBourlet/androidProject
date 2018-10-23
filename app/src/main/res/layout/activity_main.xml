@@ -10,31 +10,32 @@
         android:id="@+id/buttonAddBottle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="39dp"
+        android:layout_marginEnd="48dp"
         android:layout_marginLeft="17dp"
+        android:layout_marginRight="48dp"
         android:layout_marginStart="17dp"
         android:layout_marginTop="83dp"
         android:text="add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/priceBox"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
-    <TextView
-        android:id="@+id/costView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="totalCost:"
-        tools:layout_editor_absoluteX="263dp"
-        tools:layout_editor_absoluteY="137dp" />
 
     <EditText
         android:id="@+id/nameBox"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:layout_marginEnd="153dp"
         android:layout_marginLeft="16dp"
+        android:layout_marginRight="153dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="37dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/priceBox"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
@@ -42,11 +43,16 @@
         android:id="@+id/priceBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="41dp"
+        android:layout_marginEnd="17dp"
         android:layout_marginLeft="16dp"
+        android:layout_marginRight="17dp"
         android:layout_marginStart="16dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Price"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonAddBottle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nameBox" />
 
@@ -54,17 +60,29 @@
         android:id="@+id/eurosPriceText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="44dp"
+        android:layout_marginStart="28dp"
         android:text="XX€"
+        app:layout_constraintBottom_toTopOf="@+id/dollarPriceText"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/costView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/dollarPriceText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="11dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
         android:text="XX$"
+        app:layout_constraintEnd_toStartOf="@+id/eurosPriceText"
+        app:layout_constraintHorizontal_bias="0.32"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toBottomOf="@+id/eurosPriceText" />
 
@@ -78,13 +96,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/augustiner" />
-
-    <Button
-        android:id="@+id/checkList"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="checkList"
-        tools:layout_editor_absoluteX="263dp"
-        tools:layout_editor_absoluteY="261dp" />
 
 </android.support.constraint.ConstraintLayout>

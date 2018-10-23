@@ -19,59 +19,61 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     private TextView totalCostView;
     private TextView dollarTotalCostView;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.container);
+        command = new Command();
+
+
+
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         FragmentAddBottle fragmentAdd = new FragmentAddBottle();
 
-        fragmentTransaction.add(R.id.fragment, fragmentAdd);
+//container parent que l'on passe à fragment
+        fragmentTransaction.add(R.id.fragmentRelative, fragmentAdd );
+
+
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("command",command);
+        //bundle.putString("key", "data");
+
+        fragmentAdd.setArguments(bundle);
 
         fragmentTransaction.commit();
 
 
 
-        command = new Command();
+/*
+        Bundle bundle = new Bundle();
+        bundle.putString("key", "data");
+        FragmentAddBottle myFragment = new FragmentAddBottle ();
+        myFragment.setArguments(bundle);
+*/
 
     }
 
     public void onClick(View view) {
-        if (view.getId() == R.id.buttonAddBottle) {
 
 
-            //on replace maintenant
+    System.out.println("nameUsrChoice");
+    Intent bottleCreation = new Intent(MainActivity.this , BottleCreation.class);
 
-
-            String nameUsrChoice = ((EditText)findViewById(R.id.nameBox)).getText().toString();
-
-            String priceUsrChoice =  ((EditText)findViewById(R.id.priceBox)).getText().toString();
-
-            int priceUsrChoiceInt = Integer.parseInt(priceUsrChoice);
-
-            command.addBottle(nameUsrChoice, priceUsrChoiceInt);
-
-
-            totalCostView = findViewById(R.id.eurosPriceText);
-            totalCostView.setText(""+command.totalCost());
-            float dollarprice = (float) (command.totalCost()*0.8);
-            dollarTotalCostView = findViewById(R.id.dollarPriceText);
-            dollarTotalCostView.setText(""+dollarprice);
-
-/*
-
-
-  System.out.println(nameUsrChoice);
-            Intent bottleCreation = new Intent(MainActivity.this , BottleCreation.class);
-            startActivity(bottleCreation);*/
-        }
 
         if (view.getId() == R.id.checkList) {
+
+//traitement sur fragment add
+            fragmentAdd
+                    recuperation du bundle
+
+                    //traitement sur la liste
+
             System.out.println("nameUsrChoice");
-            Intent bottleCreation = new Intent(MainActivity.this , BottleCreation.class);
+            bottleCreation = new Intent(MainActivity.this , BottleCreation.class);
             startActivity(bottleCreation);
         }
     }
